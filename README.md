@@ -1,0 +1,3 @@
+# WeatherWand
+
+WeatherWand is a Minecraft plugin designed to give players control over the weather in the game with just a few simple commands or an interactive GUI. This plugin lets players change the weather easily as long as they have the proper permissions. Whether you’re an admin who wants to customize the environment for your server or a player who wants to add a little magic to the skies, WeatherWand makes it simple!

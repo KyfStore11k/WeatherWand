@@ -4,6 +4,7 @@ plugins {
     id 'checkstyle'
     id 'com.gradleup.shadow' version '9.0.0-beta10'
     id 'io.spring.dependency-management' version '1.1.7'
+    id 'io.papermc.hangar-publish-plugin' version '0.1.2'
 }
 
 group = 'com.kyfstore'
@@ -111,5 +112,27 @@ processResources {
     filteringCharset 'UTF-8'
     filesMatching('paper-plugin.yml') {
         expand props
+    }
+}
+
+hangarPublish {
+    publications.register('plugin') {
+        version = project.version as String
+        id = 'weatherwand'
+        channel = 'Snapshot'
+
+        apiKey = project.hangar_api_key
+
+        platforms {
+            paper {
+                jar = tasks.jar.archiveFile
+                platformVersions = ['1.21.4']
+                dependencies {
+                    hangar('PlaceholderAPI') {
+                        required = false
+                    }
+                }
+            }
+        }
     }
 }
