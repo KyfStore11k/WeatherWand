@@ -1,0 +1,15 @@
+name: WeatherWand
+version: '${version}'
+main: com.kyfstore.weatherWand.WeatherWand
+loader: com.kyfstore.weatherWand.loader.WeatherWandPluginLoader
+api-version: '1.21'
+authors: [ KyfStore ]
+description: WeatherWand is a plugin/mod that lets players change the weather via a simple GUI on Paper/Folia servers.
+website: https://github.com/KyfStore11k/WeatherWand
+folia-supported: true
+
+dependencies:
+  server:
+    PlaceholderAPI:
+      load: BEFORE
+      required: false
